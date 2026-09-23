@@ -1,0 +1,19 @@
+# Runtime parameters loaded by AgentRegistry and passed as Graph(config=...).
+
+max_retry: 0
+timeout_s: 20
+max_reporting_depth: 3
+max_query_length: 4096
+max_enrichment_workers: 8
+max_enrichment_concurrency: 4
+enrichment_timeout_s: 25
+# Full Workday REST service base URL. Marketplace overrides this non-secret
+# value with WORKDAY_TENANT_URL, for example:
+# https://tenant.myworkday.com/api/common/v1/my-tenant
+workday_tenant_url: ""
+llm_provider: "azure_openai"
+
+memory_enabled: false
+hitl:
+  enabled: false
+  max_hitl: 5

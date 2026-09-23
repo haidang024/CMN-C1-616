@@ -1,0 +1,23 @@
+# Agent Manifest — AgentRegistry entry point
+# Static discovery and compile-time declarations live at ROOT level.
+id: "CMN-C1-616"
+name: "Enterprise Workday Worker Query & Org Structure Agent"
+namespace: "agent1000"
+version: "1.0.8"
+enabled: true
+category: "Cat 1"
+generation_mode: "llm"
+industry: "CMN"
+
+base_type: "AgentBaseGraph"
+class: "src.graph.graph.Graph"
+
+required_trust_level: "VERIFIED_EXTERNAL"
+
+requires:
+  secrets:
+    - WORKDAY_TOKEN
+    - AZURE_OPENAI_API_KEY
+    - AZURE_OPENAI_ENDPOINT
+    - AZURE_OPENAI_DEPLOYMENT
+  extras: ["openai"]
